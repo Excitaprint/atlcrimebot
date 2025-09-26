@@ -30,15 +30,30 @@
     }
     .post {
         padding: 10px;
-        background-color: white;
+        background-color: rgb(253, 253, 253);
         border-radius: 16px;
         border: .25px solid rgba(88, 88, 88, 0.88);
         height: 72px;
-        box-shadow: 0 4px 8px rgba(99, 99, 99, 0.1);
+        /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
         margin: auto;
         overflow: hidden;
         display: inline;
         text-align: left;
+        transition: 100ms;
+    }
+        .post:active {
+        padding: 10px;
+        background-color: rgb(195, 214, 243);
+        /* box-shadow: 12px 12px 12px 12px rgba(159, 214, 214); */
+        border-radius: 16px;
+        border: .25px solid rgba(88, 88, 88, 0.88);
+        height: 72px;
+        /* box-shadow: 0 4px 8px rgba(99, 99, 99, 0.25); */
+        margin: auto;
+        overflow: hidden;
+        display: inline;
+        text-align: left;
+        /* transition: 100ms, box-shadow 100ms; */
         transition: 100ms;
     }
 </style>
@@ -178,7 +193,7 @@
     const cards = document.querySelectorAll('.post');
     cards.forEach(card => {
         card.addEventListener('click', function() {
-            cards.forEach(c => c.style.height = '72px');
+            cards.forEach(card => card.style.height = '72px'); // sets all cards to 72px before exanding selected card
             this.style.height = this.style.height === '216px' ? '72px' : '216px';
         });
     });
