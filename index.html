@@ -7,9 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-<scripts>
-    <!-- JS here for API calls to titles.json -->
-</scripts>
 <style>
     body {
         margin: 0;
@@ -39,80 +36,71 @@
         /* justify-content: left;
         align-content: top; */
     }
-    /* #post {
-        background-color: white;
-        border-radius: 12px;
-        height: 72px;
-        box-shadow: 0 4px 8px rgba(99, 99, 99, 0.1);
-        padding: 6px;
-        margin-bottom: 0;
-    } */
-    .grid-container > post {
+
+    .post {
+        padding: 10px;
         background-color: white;
         border-radius: 16px;
         border: .25px solid rgba(88, 88, 88, 0.88);
         height: 72px;
         box-shadow: 0 4px 8px rgba(99, 99, 99, 0.1);
-        padding: 10px;
         margin: auto;
         overflow: hidden;
         display: block;
-        /* padding-bottom: 10px auto; */
-
     }
+
 </style>
 </head>
 <body>
     <div class="grid-container">
-        <post>
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>
-        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
+        </div>
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>
-                <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>
-        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
+        </div> 
+        <div class="post">
             <h1>Sed ut Perspiciatis</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>        <post>
-            <h1>Sed ut Perspiciatis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </post>
-    </post>
-
-        
-    
+        </div> 
+<script>
+    const cards = document.querySelectorAll('.post');
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            cards.forEach(c => c.style.height = '72px');
+            this.style.height = this.style.height === '144px' ? '72px' : '144px';
+        });
+    });
+</script> 
 </body>
 </html>
