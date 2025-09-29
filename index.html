@@ -45,6 +45,7 @@
         transition: 100ms;
     }
         .post:focus, .post:active {
+        -webkit-tap-highlight-color: rgb(195, 214, 243);
         padding: 10px;
         background-color: rgb(195, 214, 243);
         /* box-shadow: 12px 12px 12px 12px rgba(159, 214, 214); */
@@ -57,7 +58,7 @@
         display: inline;
         text-align: left;
         /* transition: 100ms, box-shadow 100ms; */
-        transition: 100ms, background-color 100ms;
+        transition: 100ms, background-color 100ms, -webkit-tap-highlight-color 100ms;
     }
 </style>
 </head>
